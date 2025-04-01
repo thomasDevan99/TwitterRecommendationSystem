@@ -123,8 +123,8 @@ def get_similar_tweets(querry, df) :
 
     
 
-q1 = input("Enter your search: ")
-get_similar_tweets(q1, df)
+# q1 = input("Enter your search: ")
+# get_similar_tweets(q1, df)
 
 
 
@@ -256,9 +256,9 @@ def like(IDnum):
     qnew = 1
     
     
-def get():
-    q1 = input("Enter your search: ")
-    get_similar_tweets(q1, df)    
+# def get():
+#     q1 = input("Enter your search: ")
+#     get_similar_tweets(q1, df)    
     
     
     
