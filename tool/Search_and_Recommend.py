@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Created on Sat Mar 20 18:05:42 2021
+Updated on Apr 1 2025
 Search and Recommend Alg
 @author: Devan Thomas
 """
@@ -35,7 +35,7 @@ D = euclidean_distances(tf_idf)
 tf_idf = tf_idf.T.toarray()
 
 
-df = pd.DataFrame(tf_idf, index=vectorizer.get_feature_names())
+df = pd.DataFrame(tf_idf, index=vectorizer.get_feature_names_out())
 
 rows = len(df.columns)
 
