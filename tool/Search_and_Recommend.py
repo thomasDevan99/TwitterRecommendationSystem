@@ -14,7 +14,7 @@ from math import log
 from sklearn.metrics.pairwise import euclidean_distances
 import math
 
-raw = pd.read_csv("file-name.csv")
+raw = pd.read_csv("tool/file-name.csv")
 ##likes = pd.read_csv("likes.csv")
 
 users = raw["3"]
