@@ -68,6 +68,7 @@ sim_eu = {}
 
 q = None
 
+
 def get_similar_tweets(querry, df) :
     print("query:", querry)
     
@@ -260,6 +261,55 @@ def like(IDnum):
 #     q1 = input("Enter your search: ")
 #     get_similar_tweets(q1, df)    
     
+
+
+
+
+## Main Search Prompt
+
+
+def main():
+    while True:
+        # Ask for user input
+        print("\nOptions: ")
+        print("1. Search tweets")
+        print("2. Recommend based on last search")
+        print("3. BM25 search")
+        print("4. Recommend popular posts")
+        print("5. Exit")
+        print("6. Like a tweet (modify the query based on a liked tweet)")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            q1 = input("Enter your search: ")
+            get_similar_tweets(q1, df) # Main search function, needs input inorder to search
+
+        elif choice == '2':
+            recommend()  # Recommend based on the most recent search
+
+        elif choice == '3':
+            bm25()  # BM25 function call
+
+        elif choice == '4':
+            num = int(input("How many similar posts would you like to see? "))
+            recommendpop(num)  # Recommend based on the popularity of posts
+
+        elif choice == '5':
+            print("Exiting program.")
+            break  # Exit
+        
+        elif choice == '6':
+            tweet_id = int(input("Enter the Post ID to like: "))
+            like(tweet_id)  # Modify query based on the liked tweet
+            print("Tweet liked! Adjusting your search query.")
+
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
     
     
     
